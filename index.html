@@ -3,38 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Lista de Supermercado</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            background: linear-gradient(to right, #ececec, #b0c4de);
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 600px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
-        }
-=======
     <title>Lista de Compras</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background: linear-gradient(to right, #ccc, #87CEEB); }
         .container { margin-top: 50px; }
->>>>>>> 8b45fd7 (Atualização do código da lista de compras / Corrigindo nome do index.html)
     </style>
 </head>
 <body>
     <div class="container">
         <h2 class="text-center">Lista de Supermercado</h2>
-<<<<<<< HEAD
-=======
         
->>>>>>> 8b45fd7 (Atualização do código da lista de compras / Corrigindo nome do index.html)
         <div class="mb-3">
             <label for="produto" class="form-label">Produto</label>
             <input type="text" id="produto" class="form-control">
@@ -50,15 +29,6 @@
         <button class="btn btn-primary w-100" onclick="adicionarProduto()">Adicionar</button>
         
         <h3 class="mt-4">Itens:</h3>
-<<<<<<< HEAD
-        <ul id="lista" class="list-group"></ul>
-        <h4 class="mt-3">Subtotal: R$ <span id="subtotal">0,00</span></h4>
-    </div>
-    
-    <script>
-        let total = 0;
-
-=======
         <table class="table">
             <thead>
                 <tr>
@@ -80,7 +50,6 @@
         const itensPorPagina = 10;
         let paginaAtual = 1;
         
->>>>>>> 8b45fd7 (Atualização do código da lista de compras / Corrigindo nome do index.html)
         function adicionarProduto() {
             let produto = document.getElementById("produto").value;
             let quantidade = parseInt(document.getElementById("quantidade").value);
@@ -91,32 +60,15 @@
                 return;
             }
             
-<<<<<<< HEAD
-            let precoNum = parseFloat(preco);
-            let subtotalItem = quantidade * precoNum;
-            total += subtotalItem;
-            
-            let lista = document.getElementById("lista");
-            let item = document.createElement("li");
-            item.classList.add("list-group-item");
-            item.innerText = `${produto}, ${quantidade} x R$ ${precoNum.toFixed(2).replace(".", ",")} = R$ ${subtotalItem.toFixed(2).replace(".", ",")}`;
-            lista.appendChild(item);
-            
-            document.getElementById("subtotal").innerText = total.toFixed(2).replace(".", ",");
-=======
             listaItens.push({
                 nome: produto,
                 quantidade: quantidade,
                 valor: parseFloat(preco)
             });
->>>>>>> 8b45fd7 (Atualização do código da lista de compras / Corrigindo nome do index.html)
             
             document.getElementById("produto").value = "";
             document.getElementById("quantidade").value = "";
             document.getElementById("preco").value = "";
-<<<<<<< HEAD
-        }
-=======
             
             atualizarTabela();
         }
@@ -182,7 +134,6 @@
                 atualizarTabela();
             }
         });
->>>>>>> 8b45fd7 (Atualização do código da lista de compras / Corrigindo nome do index.html)
     </script>
 </body>
 </html>
